@@ -1,0 +1,1 @@
+{"dependencies":{"pg":"^8.13.1"},"description":"Mash'al Initiative fund management app — standalone, GitHub + Vercel ready.","engines":{"node":">=20"},"name":"mashal-fund-manager","private":true,"scripts":{"dev":"node server.js","start":"node server.js","test":"node test/test-flow.mjs"},"type":"module","version":"1.0.0"}
