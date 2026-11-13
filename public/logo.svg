@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Mash'al Initiative logo">
+  <circle cx="100" cy="100" r="96" fill="#F7F2E9"/>
+  <circle cx="100" cy="100" r="96" fill="none" stroke="#2F4A4A" stroke-width="4"/>
+  <!-- dusty-blue crescent -->
+  <path d="M138 62 A42 42 0 1 0 138 138 A34 34 0 1 1 138 62 Z" fill="#7FA8B8"/>
+  <!-- terracotta flame -->
+  <path d="M100 38 C112 58 126 66 126 88 A26 26 0 1 1 74 88 C74 70 84 62 90 50 C94 60 98 62 100 56 C102 48 98 42 100 38 Z" fill="#E08A5A"/>
+  <path d="M100 78 C106 86 112 90 112 100 A12 12 0 1 1 88 100 C88 92 94 88 96 82 C98 88 100 86 100 78 Z" fill="#F7F2E9"/>
+  <!-- sage leaves -->
+  <path d="M52 128 Q70 112 88 124 Q70 136 52 128 Z" fill="#8AA899"/>
+  <path d="M148 128 Q130 112 112 124 Q130 136 148 128 Z" fill="#8AA899"/>
+  <circle cx="100" cy="140" r="5" fill="#8AA899"/>
+  <text x="100" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-weight="bold" fill="#2F4A4A">mash'al | مشعل</text>
+</svg>

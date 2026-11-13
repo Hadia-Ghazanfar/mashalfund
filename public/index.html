@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mash'al Fund Manager — Mash'al Initiative</title>
+<meta name="description" content="Fund management for Mash'al Initiative — track donations, drives, expenses and who changed what.">
+<meta name="theme-color" content="#2F4A4A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Mash'al Funds">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="stylesheet" href="/styles.css">
+<script>
+  // Theme before paint: explicit choice wins, otherwise system.
+  try { var t = localStorage.getItem('mashal-theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+  else if (t === 'system' || !t) document.documentElement.setAttribute('data-theme', matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch (e) {}
+</script>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <div class="brand"><img src="/logo.svg" alt="Mash'al logo"><span><b>mash'al | مشعل</b><small>Mash'al Initiative · Fund Manager</small></span></div>
+  <div class="spacer"></div>
+  <button class="iconbtn" id="themeBtn" title="Theme: Light / Dark / System" aria-label="Change theme">🌙</button>
+  <button class="iconbtn hidden" id="installBtnTop" title="Install the app">⬇️</button>
+</div></header>
+<main class="wrap" id="app"><p class="muted">Loading…</p></main>
+<nav class="bottom hidden" id="nav"></nav>
+<script src="/app.js"></script>
+</body>
+</html>
