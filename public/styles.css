@@ -154,6 +154,19 @@ label.f { display: block; font-size: 14px; font-weight: 500; color: var(--text);
 .btn.sm { padding: 6px 12px; font-size: 13px; }
 .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 .row.between { justify-content: space-between; }
+/* Page headers + action buttons: centred, spaced, never clipped on phones. */
+.pagehead { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.pagehead h1 { margin: 0; flex: 1 1 auto; min-width: 0; }
+.action-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; align-items: center; margin-bottom: 16px; }
+@media (max-width: 640px) {
+  .pagehead { flex-direction: column; align-items: center; text-align: center; }
+  .pagehead h1 { font-size: 22px; text-align: center; }
+  .pagehead .btn { width: 100%; max-width: 320px; }
+  .action-row { width: 100%; }
+  .action-row .btn { flex: 1 1 40%; min-width: 140px; }
+  .drive-row { gap: 10px; }
+  .drive-row .dname { font-size: 15px; }
+}
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 @media (max-width: 480px) { .grid2.keep2 { grid-template-columns: 1fr 1fr; } }
 .pill {

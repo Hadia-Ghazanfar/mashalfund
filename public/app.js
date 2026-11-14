@@ -343,7 +343,7 @@ async function renderDashboard() {
       <div class="mini"><span>${ic('down', 15)} Received</span><b>${mask(d.totalIn)}</b></div>
       <div class="mini"><span class="spent">${ic('up', 15)} Spent</span><b>${mask(d.totalOut + d.driveSpend)}</b></div>
     </div>
-    <div class="row" style="margin-top:16px">
+    <div class="action-row" style="margin-top:16px;margin-bottom:0">
       <button class="btn sage" id="addFundsBtn">${ic('plus', 18)} Add funds</button>
       <button class="btn primary" id="addExpBtn">${ic('plus', 18)} Add expense</button>
       <button class="btn ghost" id="newDriveBtn">${ic('leaf', 18)} New drive</button>
@@ -375,7 +375,7 @@ async function renderFunds() {
   const list = (txs.transactions || []).filter((t) => fundsFilter === 'all' || (fundsFilter === 'in' ? t.kind === 'donation' : t.kind === 'expense'));
   const formOpen = fundsForm;
   app.innerHTML = `
-  <div class="row between"><h1>Funds &amp; expenses</h1><div class="row">
+  <div class="pagehead"><h1>Funds &amp; expenses</h1><div class="action-row">
     <button class="btn sage" id="openAddFunds">${ic('down', 18)} Add funds</button>
     <button class="btn primary" id="openAddExp">${ic('up', 18)} Add expense</button>
   </div></div>
@@ -497,7 +497,7 @@ let newDriveKind = 'priced', newDriveOpen = false;
 async function renderProjects() {
   const { projects } = await api('listProjects', {});
   app.innerHTML = `
-  <div class="row between"><h1>Drives &amp; projects</h1><button class="btn primary" id="newDriveToggle">${newDriveOpen ? ic('x', 18) : ic('plus', 18)} ${newDriveOpen ? 'Close' : 'New drive'}</button></div>
+  <div class="pagehead"><h1>Drives &amp; projects</h1><button class="btn primary" id="newDriveToggle">${newDriveOpen ? ic('x', 18) : ic('plus', 18)} ${newDriveOpen ? 'Close' : 'New drive'}</button></div>
   ${newDriveOpen ? `<div class="card" id="newDriveCard"></div>` : ''}
   ${(projects || []).length ? (projects || []).map((p) => {
     const spend = p.items.reduce((s, it) => s + Number(it.total || 0), 0);
