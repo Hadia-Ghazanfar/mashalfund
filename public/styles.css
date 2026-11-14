@@ -32,6 +32,11 @@ header.top { position: sticky; top: 0; z-index: 40; background: var(--bg); borde
 .brand small { display: block; color: var(--muted); font-size: .75rem; white-space: nowrap; }
 .spacer { flex: 1; }
 .iconbtn { background: var(--surface); border: 1px solid var(--border); border-radius: 50%; width: 38px; height: 38px; flex: none; font-size: 1.05rem; }
+/* Doodle theme button — hand-drawn, like the website's moon/sun button. */
+#themeBtn { width: 44px; height: 44px; background: #F7F2E9; border: 2px solid #2F4A4A; border-radius: 48% 52% 55% 45% / 52% 46% 54% 48%; box-shadow: 2px 2px 0 #2F4A4A; transform: rotate(-3deg); display: inline-flex; align-items: center; justify-content: center; padding: 0; cursor: pointer; }
+#themeBtn:hover { animation: doodle-wiggle .4s ease-in-out; }
+#themeBtn svg { width: 24px; height: 24px; display: block; }
+@keyframes doodle-wiggle { 0%,100% { transform: rotate(-3deg); } 50% { transform: rotate(2deg); } }
 .badge { background: var(--terra); color: #fff; border-radius: 999px; font-size: .7rem; padding: 1px 7px; margin-left: 4px; vertical-align: middle; }
 
 /* Cards, buttons */

@@ -24,7 +24,10 @@ function applyTheme() {
   const t = localStorage.getItem('mashal-theme') || 'system';
   const dark = t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
   document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-  $('#themeBtn').textContent = t === 'dark' ? '☀️' : t === 'light' ? '🌙' : '🌓';
+  const moon = '<svg viewBox="0 0 24 24" fill="none" stroke="#F0B446" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13.5A8.5 8.5 0 0 1 10.5 4 8.5 8.5 0 1 0 20 13.5Z" fill="#F0B446" stroke="#2F4A4A"/><path d="M18.5 3.5l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6Z" fill="#E08A5A" stroke="none"/></svg>';
+  const sun = '<svg viewBox="0 0 24 24" fill="none" stroke="#F0B446" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="#F0B446" stroke="#2F4A4A"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5 5l1.8 1.8M17.2 17.2 19 19M19 5l-1.8 1.8M6.8 17.2 5 19"/></svg>';
+  const half = '<svg viewBox="0 0 24 24" fill="none" stroke="#F0B446" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="#2F4A4A"/><path d="M12 3.5A8.5 8.5 0 0 1 12 20.5Z" fill="#F0B446" stroke="#2F4A4A"/></svg>';
+  $('#themeBtn').innerHTML = t === 'dark' ? sun : t === 'light' ? moon : half;
 }
 $('#themeBtn').onclick = () => {
   const cur = localStorage.getItem('mashal-theme') || 'system';
