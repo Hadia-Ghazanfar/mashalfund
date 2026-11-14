@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mash'al Fund Manager — Mash'al Initiative</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Mash'al Fund Manager</title>
 <meta name="description" content="Fund management for Mash'al Initiative — track donations, drives, expenses and who changed what.">
 <meta name="theme-color" content="#2F4A4A">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -12,6 +12,9 @@
 <link rel="apple-touch-icon" href="/icon-192.png">
 <link rel="icon" href="/logo.svg" type="image/svg+xml">
 <link rel="manifest" href="/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <script>
   // Theme before paint: explicit choice wins, otherwise system.
@@ -20,14 +23,29 @@
 </script>
 </head>
 <body>
-<header class="top"><div class="top-in">
-  <div class="brand"><img src="/logo.svg" alt="Mash'al logo"><span><b>mash'al | مشعل</b><small>Mash'al Initiative · Fund Manager</small></span></div>
-  <div class="spacer"></div>
-  <button class="iconbtn" id="themeBtn" title="Theme: Light / Dark / System" aria-label="Change theme"><svg viewBox="0 0 24 24" fill="none" stroke="#F0B446" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13.5A8.5 8.5 0 0 1 10.5 4 8.5 8.5 0 1 0 20 13.5Z" fill="#F0B446" stroke="#2F4A4A"/><path d="M18.5 3.5l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6Z" fill="#E08A5A" stroke="none"/></svg></button>
-  <button class="iconbtn hidden" id="installBtnTop" title="Install the app">⬇️</button>
-</div></header>
-<main class="wrap" id="app"><p class="muted">Loading…</p></main>
-<nav class="bottom hidden" id="nav"></nav>
+<div class="shell">
+  <aside class="sidebar no-print" id="sidebar" hidden>
+    <div class="side-brand"><img src="/logo.svg" alt="Mash'al logo"><div><b>mash'al | مشعل</b><span>Mash'al Initiative</span></div></div>
+    <nav class="side-nav" id="sideNav"></nav>
+    <div class="side-foot">
+      <div>
+        <div class="cap">Appearance</div>
+        <div class="apick" id="sideApick" style="margin-top:6px"></div>
+      </div>
+      <button class="btn ghost installBtn hidden" id="installBtnSide" type="button">Install the app</button>
+      <div class="side-member" id="sideMember" hidden></div>
+    </div>
+  </aside>
+  <div class="main">
+    <header class="mheader no-print" id="mheader" hidden>
+      <div class="mbrand"><img src="/logo.svg" alt="Mash'al logo"><div><b>mash'al | مشعل</b><span>Mash'al Initiative</span></div></div>
+      <button class="hbtn" id="bellBtn" type="button" title="Notifications" aria-label="Notifications"></button>
+      <button id="themeBtn" type="button" title="Theme: Light / Dark / System" aria-label="Change theme"><svg viewBox="0 0 24 24" fill="none" stroke="#F0B446" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13.5A8.5 8.5 0 0 1 10.5 4 8.5 8.5 0 1 0 20 13.5Z" fill="#F0B446" stroke="#2F4A4A"/><path d="M18.5 3.5l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6Z" fill="#E08A5A" stroke="none"/></svg></button>
+    </header>
+    <main class="wrap" id="app"><p class="muted">Loading…</p></main>
+  </div>
+</div>
+<nav class="bnav no-print" id="bnav" hidden></nav>
 <script src="/app.js"></script>
 </body>
 </html>
