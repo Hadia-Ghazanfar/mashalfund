@@ -1,7 +1,7 @@
 // Mash'al Fund Manager — service worker: offline shell + cache-first for
 // static assets, network-first for /api/ (fund data must never go stale).
 const CACHE = 'mashal-funds-v1';
-const SHELL = ['/', '/index.html', '/styles.css', '/app.js', '/logo.svg', '/manifest.webmanifest', '/icon-192.png', '/icon-512.png'];
+const SHELL = ['/', '/index.html', '/styles.css', '/app.js', '/logo.png', '/manifest.webmanifest', '/icon-192.png', '/icon-512.png'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));

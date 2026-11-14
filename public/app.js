@@ -155,7 +155,7 @@ function bindEyes(root) {
 }
 function loginShell(inner, footer) {
   return `<div class="login">
-    <img class="logo" src="/logo.svg" alt="Mash'al Initiative logo">
+    <img class="logo" src="/logo.png" alt="Mash'al Initiative logo">
     <h1>mash'al <span class="sep">|</span> مشعل</h1>
     <p class="subtitle">Mash'al Initiative · Fund Manager</p>
     <blockquote>“No one feels unseen. No one is left without support. And everyone has the opportunity to move forward.”</blockquote>
@@ -250,7 +250,7 @@ async function renderLogin() {
 }
 async function renderSetupPassword() {
   app.innerHTML = `<div class="login">
-    <img class="logo" src="/logo.svg" alt="Mash'al Initiative logo" style="width:112px;height:112px">
+    <img class="logo" src="/logo.png" alt="Mash'al Initiative logo" style="width:112px;height:112px">
     <h1 style="font-size:24px">Set your password</h1>
     <p class="subtitle">Hi ${esc(firstName(me ? me.name : ''))} — Mash'al has moved from 4-digit PINs to passwords, so PINs can't be guessed or shared around. Choose yours now; your old PIN or temporary password stops working the moment you save.</p>
     <div class="card">
@@ -766,7 +766,7 @@ async function renderProfile() {
   }
   app.innerHTML = `
   <h1>Profile &amp; team</h1>
-  <div class="card"><div class="orgcard"><img src="/logo.svg" alt="Mash'al logo"><div><b>mash'al | مشعل</b><span>${esc(orgName)}</span><small>@mashal.initiative</small></div></div></div>
+  <div class="card"><div class="orgcard"><img src="/logo.png" alt="Mash'al logo"><div><b>mash'al | مشعل</b><span>${esc(orgName)}</span><small>@mashal.initiative</small></div></div></div>
   <div class="card"><div class="memberrow" style="border:none;padding:0">${avatar(me.name, 48)}<div class="tx-main"><b style="font-size:18px">${esc(me.name)}</b><span style="font-size:14px">${esc(ROLE_TEXT[me.role] || me.role)}</span></div><button class="btn ghost" id="signOutBtn">${ic('logout', 17)} Sign out</button></div>
     <div class="quote">“Our goal isn't just to give. It's to empower, uplift, and create change that lasts.”</div>
     <div style="margin-top:12px"><button class="btn sage installBtn hidden" type="button" onclick="installApp()">Install the app</button></div>
